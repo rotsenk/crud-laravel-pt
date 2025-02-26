@@ -10,13 +10,14 @@ class PersonasController extends Controller
     public function index()
     {
         // página de inicio
-        return view( 'welcome' );
+        $datos = Personas::all();
+        return view( 'inicio', compact('datos'));
     }
 
     public function create()
     {
         //  formulario donde agregaremos los datos
-        return "aquí puedes agregar";
+        return view( 'agregar' );
     }
 
     public function store(Request $request)
@@ -27,12 +28,13 @@ class PersonasController extends Controller
     public function show(Personas $personas)
     {
         // servirá para obtener un registro de nuestra tabla
+        return view('eliminar');
     }
 
     public function edit(Personas $personas)
     {
         // método para traer datos a editar y los coloca en un formulario
-        return "aquí puedes actualizar";
+        return view('actualizar');
     }
 
     public function update(Request $request, Personas $personas)
