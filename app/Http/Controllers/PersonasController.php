@@ -10,11 +10,13 @@ class PersonasController extends Controller
     public function index()
     {
         // página de inicio
+        return view( 'welcome' );
     }
 
     public function create()
     {
         //  formulario donde agregaremos los datos
+        return "aquí puedes agregar";
     }
 
     public function store(Request $request)
