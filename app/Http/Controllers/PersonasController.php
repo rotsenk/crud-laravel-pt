@@ -32,6 +32,7 @@ class PersonasController extends Controller
     public function edit(Personas $personas)
     {
         // método para traer datos a editar y los coloca en un formulario
+        return "aquí puedes actualizar";
     }
 
     public function update(Request $request, Personas $personas)
