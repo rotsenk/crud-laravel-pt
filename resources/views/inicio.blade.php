@@ -6,10 +6,21 @@
 <div class="card">
     <h5 class="card-header">CRUD con Laravel y MySql</h5>
     <div class="card-body">
+        <div class="row">
+            <div class="col-sm-12">
+                @if($mensaje = Session::get('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{ $mensaje }}
+                    </div>
+                @endif
+            </div>
+        </div>
         <h5 class="card-title">Lista de personas</h5>
-        <a href=" {{ route('personas.create') }} " class="btn btn-primary">
-            <span class="fas fa-user-plus"></span> Agregar Nuevo Registro
-        </a>
+        <p>
+            <a href=" {{ route('personas.create') }} " class="btn btn-primary">
+                <span class="fas fa-user-plus"></span> Agregar Nuevo Registro
+            </a>
+        </p>
         <p class="card-text">
             <hr>
         <div class="table table-responsive">
