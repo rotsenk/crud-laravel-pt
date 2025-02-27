@@ -34,10 +34,11 @@ class PersonasController extends Controller
         return redirect()->route("personas.index")->with("success", "Agregado con éxito!");
     }
 
-    public function show(Personas $personas)
+    public function show($id)
     {
         // servirá para obtener un registro de nuestra tabla
-        return view('eliminar');
+        $persona = Personas::find($id);
+        return view('eliminar', compact('persona'));
     }
 
     public function edit($id)
@@ -61,8 +62,11 @@ class PersonasController extends Controller
 
     }
 
-    public function destroy(Personas $personas)
+    public function destroy($id)
     {
         // elimina un registro
+        $personas = Personas::find($id);
+        $personas->delete();
+        return redirect()->route("personas.index")->with("success", "Eliminado con éxito!");
     }
 }

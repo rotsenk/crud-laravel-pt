@@ -13,4 +13,6 @@ Route::get( '/edit/{id}', [PersonasController::class, 'edit'] )->name( 'personas
 
 Route::put( '/update/{id}', [PersonasController::class, 'update'] )->name( 'personas.update' );
 
-Route::get( '/show', [PersonasController::class, 'show'] )->name( 'personas.show' );
+Route::get( '/show/{id}', [PersonasController::class, 'show'] )->name( 'personas.show' );
+
+Route::delete( '/destroy/{id}', [PersonasController::class, 'destroy'] )->name( 'personas.destroy' );

@@ -9,9 +9,9 @@
         <div class="row">
             <div class="col-sm-12">
                 @if($mensaje = Session::get('success'))
-                    <div class="alert alert-success" role="alert">
-                        {{ $mensaje }}
-                    </div>
+                <div class="alert alert-success" role="alert">
+                    {{ $mensaje }}
+                </div>
                 @endif
             </div>
         </div>
@@ -49,7 +49,7 @@
                             </form>
                         </td>
                         <td>
-                            <form action="">
+                            <form action="{{ route('personas.show', $item->id) }}" method="GET">
                                 <button class="btn btn-danger btn-sm">
                                     <i class="fas fa-user-times"></i>
                                 </button>
