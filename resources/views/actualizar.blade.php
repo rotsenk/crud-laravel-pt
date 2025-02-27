@@ -7,18 +7,20 @@
     <h5 class="card-header">Actualizar Registro</h5>
     <div class="card-body">
         <p class="card-text">
-        <form action="#">
+        <form action="{{ route( 'personas.update', $persona->id ) }}" method="POST">
+            @csrf
+            @method("PUT")
             <label for="">Primer Apellido</label>
-            <input type="text" name="primer_apellido" class="form-control" required>
+            <input type="text" name="primer_apellido" class="form-control" required value="{{ $persona->primer_apellido }}" >
 
             <label for="">Segundo Apellido</label>
-            <input type="text" name="segundo_apellido" class="form-control" required>
+            <input type="text" name="segundo_apellido" class="form-control" required value="{{ $persona->segundo_apellido }}">
 
             <label for="">Nombre</label>
-            <input type="text" name="nombre" class="form-control" required>
+            <input type="text" name="nombre" class="form-control" required value="{{ $persona->nombre }}">
 
             <label for="">Fecha de Nacimiento</label>
-            <input type="date" name="fecha_nacimiento" class="form-control" required>
+            <input type="date" name="fecha_nacimiento" class="form-control" required value="{{ $persona->fecha_nacimiento }}">
 
             <br>
             <button class="btn btn-warning">
