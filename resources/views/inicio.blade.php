@@ -3,12 +3,13 @@
 @section('tituloPagina', 'Crud Laravel')
 
 @section('contenido')
+
 <div class="card">
     <h5 class="card-header">CRUD con Laravel y MySql</h5>
     <div class="card-body">
         <div class="row">
             <div class="col-sm-12">
-                @if($mensaje = Session::get('success'))
+                @if( $mensaje = Session::get('success') )
                 <div class="alert alert-success" role="alert">
                     {{ $mensaje }}
                 </div>
