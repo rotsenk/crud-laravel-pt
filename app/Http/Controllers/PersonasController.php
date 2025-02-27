@@ -10,7 +10,7 @@ class PersonasController extends Controller
     public function index()
     {
         // página de inicio
-        $datos = Personas::all();
+        $datos = Personas::orderBy('primer_apellido', 'asc')->paginate(2);
         return view( 'inicio', compact('datos'));
     }
 

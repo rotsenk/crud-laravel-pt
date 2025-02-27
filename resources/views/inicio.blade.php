@@ -59,6 +59,12 @@
                     @endforeach
                 </tbody>
             </table>
+            <hr>
+            <div class="row">
+                <div class="col-sm-12">
+                    {{ $datos->links() }}
+                </div>
+            </div>
         </div>
         </p>
     </div>

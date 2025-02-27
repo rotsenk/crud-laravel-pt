@@ -10,3 +10,13 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+.table:not(:last-child) > :last-child * {
+    border-bottom-color: transparent !important;
+    border-bottom: none !important;
+}
+
+body{
+    background-color: red;
+}
+
